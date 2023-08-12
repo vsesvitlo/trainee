@@ -17,7 +17,7 @@
 //15. Метод який використовує 14) метод кілька разів. На вхід метод приймає кількість ігор.
 //Далі викликається стільки разів 14 метод. І на вихід подається число % від виграша першого гравця.
 //Наприклад якщо було ігор 10, перший гравець виграв 6 разів, 1 нічия і другий гравець виграв 3 рази,
-//то повернеться 60% (double). 60 % вернеться тому що гравець виграв 6 разів із 10 ігор. 6/10 * 100%
+//то повернеться 60% (double). 60 % вернеться тому що гравець виграв 6 разів із 10 ігор. 6/10 * 100% ++
 
 
 //11
@@ -108,23 +108,19 @@ static double GreatGame(int howMuchGames)
         {
             count1 += 1;
             firstPlayerWins = (count1 * 100) / howMuchGames;
-
+            firstPlayerWinsDouble = Convert.ToDouble(firstPlayerWins);
             Console.WriteLine(firstPlayerWins);
-
+            Console.WriteLine(String.Format(CultureInfo.InvariantCulture, "{0:#0.##%}", firstPlayerWinsDouble/100)); ///???
         }
-        if (count1ForPlayer1 < count1ForPlayer2)
-        {
+        //if (count1ForPlayer1 < count1ForPlayer2)
+        //
+        else{
             count2 += 1;
 
         }
         count1ForPlayer1 = player1.Next(1, 6);
         count1ForPlayer2 = player2.Next(1, 6);
-
-
-        //Console.WriteLine(firstPlayerWins.ToString("#0.##%", CultureInfo.InvariantCulture));
-
-        //Console.WriteLine(firstPlayerWins "#0.##%");
-        Console.WriteLine(String.Format(CultureInfo.InvariantCulture, "{0:#0.##%}", firstPlayerWinsDouble));
+       
     }
 
     return firstPlayerWinsDouble;
