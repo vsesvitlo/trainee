@@ -53,7 +53,7 @@ static int RandomNumber()
     var randomNum = new Random();
     // Console.Write(randomNum.Next(0, 6));
     //Console.WriteLine();
-    return randomNum.Next();
+    return randomNum.Next(0, 6);
 }
 RandomNumber();
 
