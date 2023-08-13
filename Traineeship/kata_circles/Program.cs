@@ -10,6 +10,7 @@ for (int i = 0; i < num.Length; i++)
     {
         a += num[i];
     }
+   reverse =  null;
 }
 int.TryParse(a, out int sumConvert);
 sum = sumConvert + 1;
