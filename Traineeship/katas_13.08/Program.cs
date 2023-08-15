@@ -72,39 +72,131 @@
 
 //None of the arrays will be empty, so you don't have to worry about that!
 
-static object[] RemoveEveryOther(object[] arr)
+/*static object[] RemoveEveryOther(object[] arr)
 {
     int newLength = 0;
-    if (arr.Length % 2 == 0)
+
+    for (int i = 0; i < arr.Length; i += 2)
     {
-        newLength = arr.Length / 2;
-        object[] arrNew = new object[newLength];
-        for (int h = 0; h < arr.Length; h += 2)
+        newLength += 1;
+    }
+
+    object[] arrNew = new object[newLength];
+    for (int j = 0, h = 0; h < arr.Length; j++, h += 2)
+    {
+        arrNew[j] = arr[h];
+    }
+    return arrNew;
+};
+RemoveEveryOther(new object[] { "Hello", "Goodbye", "Hello Again" });*/
+
+//Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'.
+//Return the resulting string.
+
+//Note: input will never be an empty string
+
+/*
+ static string FakeBin(string x)
+{
+    var result = String.Empty;
+    int[] arrNew = new int [x.Length];
+    int[] arrNewResult = new int[arrNew.Length];
+
+    for (int i = 0; i < x.Length; i++)
+    {
+        arrNew[i] = x[i];
+    };
+    for (int j = 0; j < arrNew.Length; j++)
+    {
+        if (arrNew[j] < 5)
         {
-            for (int i = 0; i > newLength; i++)
-            {
-                arrNew[i] = arr[h];
-                Console.WriteLine(arrNew[i]);
-            }
+            arrNewResult[j] = 0;
         }
-        return arrNew;
+        else if (arrNew[j] >= 5)
+        {
+            arrNewResult[j] = 1;
+        }
+        arrNewResult[j] = arrNew[j] ;
+        Console.WriteLine(arrNewResult[j]);
+    };
+
+    foreach(var k in arrNewResult)
+    {
+        result += k;
+        Console.WriteLine(result);
+    }
+    //arrNewResult.ToString();
+
+    return result;
+}
+FakeBin("45385593107843568");
+
+*/
+
+//Write a function that takes a single string (word) as argument.
+//The function must return an ordered list containing the indexes of all capital letters in the string.
+
+  static int[] Capitals(string word)
+  {
+    int count = 0;
+    //bool result1;
+    for (int i = 0; i < word.Length; i++){
+        // Console.WriteLine(word.GetType());
+        //string a = word[i].ToString();
+        // Console.WriteLine(a.GetType());
+      //  char a = word[i];
+    //result1 = Char.isUpper(a);
+       // if (Char.isUpper(word[i])){
+        count +=1;
+     //}
+    }
+    int[] result = new int [count];
+    for(int j = 0, k = 0; j < word.Length; j++, k++){
+     // if(word[j].isUpper()){
+        result[k] = j;
+     // }
+    }
+		return result;
+  }
+Capitals("CodEWaRs");
+
+//its elements is odd or even.
+
+//Give your answer as a string matching "odd" or "even".
+
+//If the input array is empty consider it as: [0] (array with a zero).
+
+
+/*
+ static string OddOrEven(int[] array)
+{
+    int sum = 0;
+    string result = "";
+    string even = "even";
+    string odd = "odd";
+    if (array.Length == 0)
+    {
+        sum = 0;
+    }
+    for (int i = 0; i < array.Length; i++)
+    {
+        sum += array[i];
+        Console.WriteLine(sum);
+    }
+    if (sum % 2 == 1 || sum % 2 == -1)
+    {
+        result = odd;
     }
     else
     {
-        newLength = (arr.Length / 2) - 1;
-        object[] arrNew = new object[newLength];
-        for (int h = 0; h < arr.Length; h += 2)
-        {
-            for (int i = 0; i > newLength; i++)
-            {
-                arrNew[i] = arr[h];
-                Console.WriteLine(arrNew[i]);
-            }
-        }
-        return arrNew;
+        result = even;
     }
-  // return arrNew;
-
+    Console.WriteLine(result);
+    return result;
 };
-RemoveEveryOther(new object[] { "Hello", "Goodbye", "Hello Again" });
-//myAL.RemoveAt( 5 );
+
+OddOrEven(new int[] { 0, -1, 2 });
+OddOrEven(new int[] { 0, 1, -4 });
+OddOrEven(new int[] { -1023, -1, 3 });
+
+*/
