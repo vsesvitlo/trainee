@@ -1,6 +1,6 @@
 ﻿//Write a function which calculates the average of the numbers in a given list.
 
-//Note: Empty arrays should return 0.
+//Note: Empty arrays should return 0.+
 
 /*class AverageSolution
 {
@@ -29,7 +29,7 @@
 //"you will win"-- >["you 3", "will 4", "win 3"]
 //Your task is to write a function that takes a String and returns an Array/list with the length of each word added to each element .
 
-//Note: String will have at least one element; words will always be separated by a space.
+//Note: String will have at least one element; words will always be separated by a space. +
 
 
 /*public class Kata
@@ -70,7 +70,7 @@
 
 //["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
 
-//None of the arrays will be empty, so you don't have to worry about that!
+//None of the arrays will be empty, so you don't have to worry about that! +
 
 /*static object[] RemoveEveryOther(object[] arr)
 {
@@ -95,7 +95,7 @@ RemoveEveryOther(new object[] { "Hello", "Goodbye", "Hello Again" });*/
 
 //Note: input will never be an empty string
 
-/*
+
  static string FakeBin(string x)
 {
     var result = String.Empty;
@@ -131,7 +131,7 @@ RemoveEveryOther(new object[] { "Hello", "Goodbye", "Hello Again" });*/
 }
 FakeBin("45385593107843568");
 
-*/
+
 
 //Write a function that takes a single string (word) as argument.
 //The function must return an ordered list containing the indexes of all capital letters in the string.
@@ -164,7 +164,7 @@ Capitals("CodEWaRs");
 
 //Give your answer as a string matching "odd" or "even".
 
-//If the input array is empty consider it as: [0] (array with a zero).
+//If the input array is empty consider it as: [0] (array with a zero). +
 
 
 /*

@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "methods_10.08", "methods_10
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "katas_13.08", "katas_13.08\katas_13.08.csproj", "{D1845C40-8830-4E23-99C3-C81C6FA6C4A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timespan", "Timespan\Timespan.csproj", "{FCFF4312-8D7D-4C43-B9E1-CA1B85570150}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -125,6 +127,10 @@ Global
 		{D1845C40-8830-4E23-99C3-C81C6FA6C4A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1845C40-8830-4E23-99C3-C81C6FA6C4A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1845C40-8830-4E23-99C3-C81C6FA6C4A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCFF4312-8D7D-4C43-B9E1-CA1B85570150}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCFF4312-8D7D-4C43-B9E1-CA1B85570150}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCFF4312-8D7D-4C43-B9E1-CA1B85570150}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCFF4312-8D7D-4C43-B9E1-CA1B85570150}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
