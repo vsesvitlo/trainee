@@ -104,7 +104,8 @@ RemoveEveryOther(new object[] { "Hello", "Goodbye", "Hello Again" });*/
 
     for (int i = 0; i < x.Length; i++)
     {
-        arrNew[i] = x[i];
+        arrNew[i] = int.Parse(x[i].ToString());
+        Console.WriteLine(arrNew[i]);
     };
     for (int j = 0; j < arrNew.Length; j++)
     {
@@ -116,7 +117,7 @@ RemoveEveryOther(new object[] { "Hello", "Goodbye", "Hello Again" });*/
         {
             arrNewResult[j] = 1;
         }
-        arrNewResult[j] = arrNew[j] ;
+        //arrNewResult[j] = arrNew[j] ;
         Console.WriteLine(arrNewResult[j]);
     };
 

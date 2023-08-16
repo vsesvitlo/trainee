@@ -20,6 +20,6 @@ for (int j = 0; j < sumForReverse.Length; j++)
 {
     element = sumForReverse[j].ToString();
     reverse[j] = int.Parse(element);
-    //Console.WriteLine(reverse[j]);
+    Console.WriteLine(reverse[j]);
 }
 

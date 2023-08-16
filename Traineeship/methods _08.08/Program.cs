@@ -96,7 +96,7 @@ static void Show(int[] arrayToShow)
 {
     foreach (int i in arrayToShow)
     {
-        //  Console.WriteLine("{0} ", i);
+          Console.WriteLine("{0} ", i);
     }
 };
 Show(arrayToShow);

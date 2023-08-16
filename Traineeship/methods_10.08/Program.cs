@@ -30,7 +30,7 @@ static string SubString(string first, int toCut)
     return sub;
 
 };
-SubString("Hello Moto", 3);
+//SubString("Hello Moto", 3);
 
 //12
 
@@ -41,7 +41,7 @@ static string SubStringBoth(string initialText, int firstNum, int length)
     return subText;
 
 };
-SubStringBoth("SomeText", 2, 5);
+//SubStringBoth("SomeText", 2, 5);
 
 //13
 static int RandomSum()
@@ -56,42 +56,36 @@ static int RandomSum()
     //Console.WriteLine(sum);
     return sum;
 };
-RandomSum();
+//RandomSum();
 
 //14
-static void RandomText()
+static string RandomText()
 {
-    var player1 = new Random();
-    var player2 = new Random();
-    int firstPlayer1 = player1.Next(1, 6);
-    int secondPlayer1 = player1.Next(1, 6);
-    int firstPlayer2 = player2.Next(1, 6);
-    int secondPlayer2 = player2.Next(1, 6);
-    int sum1player = firstPlayer1 + secondPlayer1;
-    int sum2player = firstPlayer2 + secondPlayer2;
+    int sum1player = RandomSum();
+    int sum2player = RandomSum();
 
     if (sum1player > sum2player)
     {
-        //  Console.WriteLine("Player number 1 wins!");
+        return "Player number 1 wins!";
     }
     else if (sum1player < sum2player)
     {
-        // Console.WriteLine("Player number 2 wins!");
+        return "Player number 2 wins!";
     }
     else
     {
-        // Console.WriteLine("The result of competition is draw");
+        return "The result of competition is draw";
     }
 
 };
-RandomText();
+//RandomText();
 
 //15
 
 static double GreatGame(int howMuchGames)
 {
 
-    var player1 = new Random();
+    /*var player1 = new Random();
     var player2 = new Random();
     int count1ForPlayer1 = 0; player1.Next(1, 6);
     int count1ForPlayer2 = 0; player2.Next(1, 6);
@@ -112,8 +106,6 @@ static double GreatGame(int howMuchGames)
             Console.WriteLine(firstPlayerWins);
             Console.WriteLine(String.Format(CultureInfo.InvariantCulture, "{0:#0.##%}", firstPlayerWinsDouble/100)); ///???
         }
-        //if (count1ForPlayer1 < count1ForPlayer2)
-        //
         else{
             count2 += 1;
 
@@ -124,6 +116,26 @@ static double GreatGame(int howMuchGames)
     }
 
     return firstPlayerWinsDouble;
+    */
 
+
+    
+    int[] result = new int[howMuchGames];
+    int count1wins = 0;
+    int count2wins = 0;
+    double first = 0;
+
+    for (int i = 0; i < howMuchGames; i ++)
+    {
+        string sumCourt = RandomText();
+        if (sumCourt == "Player number 1 wins!")
+        {
+           count1wins += 1;
+        }
+        first = (count1wins * 100) / howMuchGames;
+        Console.WriteLine(first);
+    }
+    return first;
+   
 };
-GreatGame(6);
+GreatGame(16);
