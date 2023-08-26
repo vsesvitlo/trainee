@@ -93,10 +93,10 @@ RemoveEveryOther(new object[] { "Hello", "Goodbye", "Hello Again" });*/
 //Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'.
 //Return the resulting string.
 
-//Note: input will never be an empty string
+//Note: input will never be an empty string +
 
 
- static string FakeBin(string x)
+ /*static string FakeBin(string x)
 {
     var result = String.Empty;
     int[] arrNew = new int [x.Length];
@@ -131,7 +131,7 @@ RemoveEveryOther(new object[] { "Hello", "Goodbye", "Hello Again" });*/
     return result;
 }
 FakeBin("45385593107843568");
-
+ */
 
 
 //Write a function that takes a single string (word) as argument.
@@ -140,26 +140,39 @@ FakeBin("45385593107843568");
   static int[] Capitals(string word)
   {
     int count = 0;
-    //bool result1;
     for (int i = 0; i < word.Length; i++){
-        // Console.WriteLine(word.GetType());
-        //string a = word[i].ToString();
-        // Console.WriteLine(a.GetType());
-      //  char a = word[i];
-    //result1 = Char.isUpper(a);
-       // if (Char.isUpper(word[i])){
-        count +=1;
-     //}
+
+        int a = Convert.ToInt32(word[i]);
+        if (a < 90)
+        {
+
+            count += 1;
+            //Console.WriteLine(count);
+        }
     }
+    int k = 0;
     int[] result = new int [count];
-    for(int j = 0, k = 0; j < word.Length; j++, k++){
-     // if(word[j].isUpper()){
-        result[k] = j;
-     // }
+    for(int j = 0; j < word.Length; j++){
+        
+        if(k < count)
+        {
+            int b = Convert.ToInt32(word[j]);
+            if (b < 90)
+            {
+                result[k] = j;
+                // Console.WriteLine(result[k]);
+                k++;
+            }
+           
+        }
     }
 		return result;
   }
-Capitals("CodEWaRs");
+int[] result = Capitals("cOdeWaRs");
+for (int j = 0; j < result.Length; j++)
+{
+    Console.WriteLine(result[j]);
+}
 
 //its elements is odd or even.
 
