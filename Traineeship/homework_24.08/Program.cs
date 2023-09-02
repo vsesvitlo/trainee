@@ -17,9 +17,9 @@ string[] Alphabet()
     string[] letters = new string[count];
     char letr = 'A';
     for (int i = 0; i < count; i++)
-    { 
+    {
         letters[i] = Convert.ToString(letr);
-       // Console.WriteLine(letr);
+        // Console.WriteLine(letr);
         letr++;
     }
     return letters;
@@ -39,7 +39,7 @@ int BigLetters(string s)
         if (a < 90)
         {
             result++;
-           // Console.WriteLine(result);
+            // Console.WriteLine(result);
         }
     }
     return result;
@@ -58,7 +58,7 @@ static int[] RandomList()
         randomList[i] = transformRandom;
         //Console.WriteLine(randomList[i]);
     }
-    
+
     return randomList;
 };
 RandomList();
@@ -79,19 +79,20 @@ int[] MaxPair(int[] mass)
             indexForPlus = mass[i - 1];
             indexForPlusFirst = mass[i];
 
-           // Console.WriteLine(indexForPlus);
+            // Console.WriteLine(indexForPlus);
             //Console.WriteLine(indexForPlusFirst);
             sum = indexForPlus + indexForPlusFirst;
             //Console.WriteLine(sum);
-           // for (int k = 0; k < pairResult.Length; k++)
+            // for (int k = 0; k < pairResult.Length; k++)
             //{
-                pairResult[0] = mass[i - 1];
-                pairResult[1] = mass[i];
-                Console.WriteLine(pairResult[0]);
-                Console.WriteLine(pairResult[1]);
+            pairResult[0] = mass[i - 1];
+            pairResult[1] = mass[i];
+            Console.WriteLine(pairResult[0]);
+            Console.WriteLine(pairResult[1]);
             // }
 
         }
+
 
     }
 
