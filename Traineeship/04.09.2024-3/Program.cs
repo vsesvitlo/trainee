@@ -14,7 +14,7 @@
 Console.WriteLine("Please, enter the time in minutes for Tetiana");
 string step1 = Console.ReadLine();
 int step2 = int.Parse(step1);
-int hours = 450 / 60;
-int minutes = 450 % 60;
+int hours = step2 / 60;
+int minutes = step2 % 60;
 Console.WriteLine(hours);
 Console.WriteLine(minutes);
