@@ -14,7 +14,7 @@ Two
 Three
 */
 
-using System.Linq.Expressions;
+
 
 Console.WriteLine("Please, enter the number");
 string step1 = Console.ReadLine();
