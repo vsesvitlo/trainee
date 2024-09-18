@@ -11,16 +11,13 @@ Console.WriteLine("Please enter the letter");
 string step2 = Console.ReadLine();
 
 var a = "";
-for (int i = 0; i < 1; i++)
-{
-    for (int j = 0; j < 1; j++)
-    {
+
         
-        if (step1[i] > step2[j])
+        if (step1[0] > step2[0])
         {
             a = step1 + " is not less than " + step2;
         }
-        if (step1[i] == step2[j])
+       else if (step1[0] == step2[0])
         {
             a = "They equal!";
         }
@@ -28,8 +25,6 @@ for (int i = 0; i < 1; i++)
         {
             a = step1 + " is less than " + step2;
         }
-    }
-    
-}
+
 Console.WriteLine(a);
 

@@ -18,6 +18,7 @@ string step2 = Console.ReadLine();
 string new1 = step1.Substring(0, 1);
 string new2= step2.Substring(0, 1);
 var a = "";
+/*
 for (int i = 0; i < step1.Length; i++)
 {
     for (int j = 0; j < step2.Length; j++)
@@ -26,7 +27,7 @@ for (int i = 0; i < step1.Length; i++)
         {
             a = step2 + " " + step1;
         }
-        if (step1[i] == step2[j])
+         else if(step1[i] == step2[j])
         {
             a = "They equal!";
         }
@@ -41,3 +42,8 @@ Console.WriteLine(a);
 //Console.WriteLine(step1, step2);
 //Console.WriteLine(new1);
 //Console.WriteLine(new2);
+*/
+
+string[] characters = { step1, step2 };
+    Array.Sort(characters);
+Console.WriteLine(characters[0] + " " + characters[1]);
