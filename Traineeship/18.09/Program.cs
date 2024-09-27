@@ -6,13 +6,14 @@
 
 Console.WriteLine("Please, enter any sentence");
 string step1 = Console.ReadLine();
-//Array arr = step1.ToArray();
+char[] arr = step1.ToArray();
 var a = "";
+arr = arr.Reverse().ToArray();
+Console.WriteLine(arr);
 
-//Array arr2 = arr.Reverse();
 
 for(int i = step1.Length - 1; i >= 0; i--)
 {
     a += step1[i];
 }
-Console.WriteLine(a);
+//Console.WriteLine(a);
