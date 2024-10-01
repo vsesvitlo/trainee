@@ -19,9 +19,33 @@
 Console.WriteLine("Please, enter the n");
 string step1 = Console.ReadLine();
 int n = int.Parse(step1);
-var result = "";
-for (int i = 1; i <= n; i++)
-{ 
-    result += i;
-    Console.WriteLine(result);
-} 
+var resultLine = "";
+var resultInLine = "";
+var check = "";
+for (int j = 1; j <= n; j++)
+{
+    resultInLine = j.ToString();
+    for(int l = 0; l < j - 1; l++) //??
+    {
+        resultInLine += j;
+    }
+
+    Console.WriteLine(resultInLine);
+}
+
+
+//Console.WriteLine(resultInLine);
+
+//for (int i = 1; i <= int.Parse(resultInLine); i++)
+//{
+//for (int k = int.Parse(resultInLine); k <= n; k++)
+//{
+
+//  resultLine += k;
+// }
+//resultLine = resultInLine.ToString();
+// resultLine += string.Concat(i,j);
+
+//Console.WriteLine(resultLine);
+// }
+//check += resultInLine;
