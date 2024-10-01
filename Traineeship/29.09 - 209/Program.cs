@@ -14,7 +14,7 @@
 1 #*/
 
 
-//Not solved
+
 Console.WriteLine("Please, enter the n");
 string step1 = Console.ReadLine();
 int n = int.Parse(step1);

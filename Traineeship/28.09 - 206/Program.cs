@@ -11,7 +11,7 @@
 10
 Вихідні дані:
 
-9.60 ???*/
+9.60 */
 Console.WriteLine("Please, enter the number - the quantity of subjects");
 string step1 = Console.ReadLine();
 int n = int.Parse(step1);
@@ -23,8 +23,7 @@ for (int i = n; i > 0; i--)
     string step2 = Console.ReadLine();
     double mark = double.Parse(step2);
     allMarks += mark;
-    
-    result = Math.Round((allMarks / n), 2);
 }
-//result = allMarks / n ;
+result = Math.Round((allMarks / n), 2);
+
 Console.WriteLine(result);
