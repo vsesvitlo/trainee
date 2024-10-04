@@ -24,8 +24,8 @@ var resultInLine = "";
 var check = "";
 for (int j = 1; j <= n; j++)
 {
-    resultInLine = j.ToString();
-    for(int l = 0; l < j - 1; l++) //??
+    resultInLine = "";
+    for(int l = 0; l < j; l++)
     {
         resultInLine += j;
     }
