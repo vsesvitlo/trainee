@@ -16,7 +16,7 @@
 3 x 8 = 24
 3 x 9 = 27
 3 x 10 = 30*/
-
+ 
 Console.WriteLine("Please, enter the n");
 string step1 = Console.ReadLine();
 string result = "";
