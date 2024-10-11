@@ -41,21 +41,22 @@ namespace _08._10._2024_814
             string greetings = "I have opened a bank account";
             return greetings;
         }
-        public string Deposit()
+        public string Deposit(double sumToReceive)
         {
-            Console.WriteLine("Please, enter the sum to deposit");
+            /*Console.WriteLine("Please, enter the sum to deposit");
             string step1 = Console.ReadLine();
-            double sumToReceive = double.Parse(step1);
+            double sumToReceive = double.Parse(step1);*/
+
             double result = money + sumToReceive;
             string information = "I have deposited to your account: " + sumToReceive +
             " " + "On the account: " + result;
             return information;
         }
-        public string Credit()
+        public string Credit(double sumToMinus)
         {
-            Console.WriteLine("Please, enter the sum to withdrawn");
+           /* Console.WriteLine("Please, enter the sum to withdrawn");
             string step2 = Console.ReadLine();
-            double sumToMinus = double.Parse(step2);
+            double sumToMinus = double.Parse(step2);*/
             string information = "";
 
             if (money < sumToMinus)
@@ -79,8 +80,8 @@ namespace _08._10._2024_814
         {
             Bank bank = new Bank(1000);
             Console.WriteLine(bank.Greeting());
-            Console.WriteLine(bank.Deposit());
-            Console.WriteLine(bank.Credit());
+            Console.WriteLine(bank.Deposit(100));
+            Console.WriteLine(bank.Credit(40));
             
         }
     }

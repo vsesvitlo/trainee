@@ -48,7 +48,7 @@ Console.WriteLine("Please, enter an integer b >= a");
 string step2 = Console.ReadLine();
 int b = int.Parse(step2);
 int d = 0;
-int x = 0;
+int x = int.MaxValue;
 if (a < b)
 {
 for (int c = a; c < b; c++)
@@ -57,10 +57,6 @@ for (int c = a; c < b; c++)
         if (d < x)
         {
             x = d;
-        }
-        else
-        {
-            x = c;
         }
 
 }
@@ -72,29 +68,8 @@ else if (a > b)
 }
 else
 {
+    x = 0;
     Console.WriteLine(x);
 }
 
-/*for (int c = b; c >= a / 2; c--)
-{
-    d = (c - a) + (b - c);
-    forC = c;
-
-    for (int e = a; e <= b / 2; e++)
-    {
-
-        x = (e - a) + (b - e);
-        forE = e;
-
-        if (x > d)
-
-        {
-            Console.WriteLine(forE);
-        }
-        else
-        {
-            Console.WriteLine(forC);
-        }
-    }
-}*/
 
