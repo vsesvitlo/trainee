@@ -19,9 +19,21 @@
  * 
  * Створіть батьківський клас Pets, що створює список ваших домашніх улюбленців. 
  * 
- * У підсумку, надрукуйте інформацію про ваших домашніх тварин, на зразок, як у вихідних даних.*/
+ * У підсумку, надрукуйте інформацію про ваших домашніх тварин, на зразок, як у вихідних даних.
+ 
+ Вхідні дані:
+
+Немає
+Вихідні дані:
+
+I have 3 dogs.
+Toby is 4. Kind Golden Retriever breed dog.
+Charlie is 6. Tireless Jack Russell Terrier breed dog.
+Rocky is 7. Obedient ordinary breed dog.
+And they're all mammals, of course*/
 using System;
 using System.Collections.Generic;
+using System.Xml.Linq;
 
 namespace _17._10___819
 {
@@ -70,6 +82,19 @@ namespace _17._10___819
             return Check;
         }
 
+
+        public string NameDescription(Dog Check)
+        {
+
+            return this.name;
+        }
+
+        public int AgeDescription(Dog Check)
+        {
+
+            return this.age;
+        }
+
         public string NatureDescription(Dog Check)
         {
 
@@ -104,9 +129,9 @@ namespace _17._10___819
         {
             static void Main(string[] args)
             {
-                Dog Phild = new Dog("mammal", "queit", "metis", "Phild", 7);
-                Dog Anica = new Dog("mammal", "loud", "akita", "Anica", 2);
-                Dog Pudge = new Dog("mammal", "kind", "terrier", "Pudge", 10);
+                Dog Phild = new Dog("mammal", "Queit", "metis", "Phild", 7);
+                Dog Anica = new Dog("mammal", "Loud", "akita", "Anica", 2);
+                Dog Pudge = new Dog("mammal", "Kind", "terrier", "Pudge", 10);
                 Console.WriteLine(Phild.Introdusing());
                 Console.WriteLine(Anica.DogSound());
                 Dog newBorn = Anica.newPuppy(Anica);
@@ -118,7 +143,19 @@ namespace _17._10___819
                 Pets first = new Pets(family);
                 Console.WriteLine(first.Calc());
 
+            Console.WriteLine($"I have {first.Calc()} dogs.{Phild.name} is {Phild.age}. {Phild.nature} {Phild.breed} breed dog. " +
+                $"{Anica.NameDescription(Anica)} is {Anica.AgeDescription(Anica)}. {Anica.NatureDescription(Anica)} {Anica.BreedDescription1(Anica)} breed dog" +
+                $"{Pudge.NameDescription(Pudge)} is {Pudge.AgeDescription(Pudge)}. {Pudge.NatureDescription(Pudge)} {Pudge.BreedDescription1(Pudge)} " +
+                $"breed dog" +
+                $"\"And they're all mammals, of course.");
+            /*I have 3 dogs.
+Toby is 4. Kind Golden Retriever breed dog.
+Charlie is 6. Tireless Jack Russell Terrier breed dog.
+Rocky is 7. Obedient ordinary breed dog.
+And they're all mammals, of course*/
+            
+
         }
-        }
+    }
 
     }
