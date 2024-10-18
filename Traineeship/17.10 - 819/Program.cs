@@ -68,7 +68,7 @@ namespace _17._10___819
             return this.nature;
 
         }
-        public Dog newPuppy (Dog copy)
+        public Dog newPuppy ()
         {
             Dog Puppy = new Dog(this.mammal, this.nature, this.breed, this.name, this.age);
             return Puppy;
@@ -95,13 +95,13 @@ namespace _17._10___819
             return this.age;
         }
 
-        public string NatureDescription(Dog Check)
+        public string NatureDescription()
         {
 
             return this.nature;
         }
 
-        public string BreedDescription1(Dog Check)
+        public string BreedDescription1()
         {
             return this.breed;
         }
@@ -134,18 +134,18 @@ namespace _17._10___819
                 Dog Pudge = new Dog("mammal", "Kind", "terrier", "Pudge", 10);
                 Console.WriteLine(Phild.Introdusing());
                 Console.WriteLine(Anica.DogSound());
-                Dog newBorn = Anica.newPuppy(Anica);
+                Dog newBorn = Anica.newPuppy();
                 Console.WriteLine(newBorn);
                 Console.WriteLine(Pudge.BreedDescription(Pudge, "terrier"));
-                Console.WriteLine(Pudge.BreedDescription1(Pudge));
-                Console.WriteLine(Pudge.NatureDescription(Anica));
+                Console.WriteLine(Pudge.BreedDescription1());
+                Console.WriteLine(Pudge.NatureDescription());
                 Dog[] family = { Phild,Anica,Pudge };
                 Pets first = new Pets(family);
                 Console.WriteLine(first.Calc());
 
             Console.WriteLine($"I have {first.Calc()} dogs.{Phild.name} is {Phild.age}. {Phild.nature} {Phild.breed} breed dog. " +
-                $"{Anica.NameDescription(Anica)} is {Anica.AgeDescription(Anica)}. {Anica.NatureDescription(Anica)} {Anica.BreedDescription1(Anica)} breed dog" +
-                $"{Pudge.NameDescription(Pudge)} is {Pudge.AgeDescription(Pudge)}. {Pudge.NatureDescription(Pudge)} {Pudge.BreedDescription1(Pudge)} " +
+                $"{Anica.NameDescription(Anica)} is {Anica.AgeDescription(Anica)}. {Anica.NatureDescription()} {Anica.BreedDescription1()} breed dog" +
+                $"{Pudge.NameDescription(Pudge)} is {Pudge.AgeDescription(Pudge)}. {Pudge.NatureDescription()} {Pudge.BreedDescription1()} " +
                 $"breed dog" +
                 $"\"And they're all mammals, of course.");
             /*I have 3 dogs.

@@ -21,32 +21,25 @@ namespace _17._10._2024___822
     public class Animal
     {
         public string species;
-        public string sound;
 
-        public Animal(string species, string sound)
+        public Animal(string species)
         {
             this.species = species;
-            this.sound = sound;
+      
         }
-        public string Show_species() { 
+        public string ShowSpecies() { 
 
             return this.species;
                 }
-        public string Make_sound()
+        public virtual string MakeSound()
         {
 
-            return this.sound;
+            return null;
         }
 
-        public string Show_animal_info(Animal animal)
+        public static string ShowAnimalInfo(Animal animal)
         {
-            if (animal.species != "animal")
-            {
-                Console.WriteLine("It is not an animal");
-            }
-            Show_species();
-            Make_sound();
-            return "It is animal";
+            return animal.species;
                 }
         /*public virtual void animalSound()  
   {
@@ -57,30 +50,28 @@ namespace _17._10._2024___822
 
     public class Dog : Animal
     {
-        public Dog(string species, string sound) : base(species, sound)
-        {
-            Show_species();
+        public Dog() : base("dog")
+        { 
+            ShowSpecies();
             
-    }
-        static void DogSound()
-        {
-            Console.WriteLine("woof");
         }
-        /* public override void InfoSound()
-        {
-            Console.WriteLine("The pig says: wee wee");
-        }*/
+
+        public override string MakeSound() {
+            return "woof";
+        }
+        
+ 
     }
     public class Cat : Animal
     {
-        public Cat(string species, string sound) : base(species, sound)
+        public Cat() : base("cat")
         {
-            Show_species();
+            ShowSpecies();
             
         }
-        static void CatSound()
+        public override string MakeSound()
         {
-            Console.WriteLine("muau");
+            return "muau";
         }
     }
 
@@ -88,11 +79,13 @@ namespace _17._10._2024___822
     {
         static void Main(string[] args)
         {
-            Animal example = new Animal("animal", "sound");
-            Dog puppy = new Dog("animal", "woof");
-            Cat kitten = new Cat("animal", "muau");
-            Console.WriteLine(puppy.Show_animal_info(puppy));
-            Console.WriteLine(kitten.Show_animal_info(kitten));
+            Animal example = new Animal("animal");
+            Dog puppy = new Dog();
+            Cat kitten = new Cat();
+            Console.WriteLine(Animal.ShowAnimalInfo(puppy));
+            Console.WriteLine(Animal.ShowAnimalInfo(kitten));
+            Console.WriteLine(kitten.MakeSound());
+            Console.WriteLine(puppy.MakeSound());
         }
     }
 }
