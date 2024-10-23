@@ -23,17 +23,18 @@ namespace _23._10._2024___3
     }
     class Manager : Employee
     {
+       
         double mainSum;
         double addBonus;
 
-        public Manager(double mainSum, double addBonus) : base("name")
+        public Manager( double mainSum, double addBonus) : base("name")
         {
             this.mainSum = mainSum;
             this.addBonus = addBonus;
         }
         public override string CalcWage()
         {
-            double wage =this.mainSum + this.addBonus;
+            double wage = this.mainSum + this.addBonus;
             return wage.ToString();
         }
     }
