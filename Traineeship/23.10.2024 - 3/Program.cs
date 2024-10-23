@@ -10,7 +10,7 @@ namespace _23._10._2024___3
 {
     public class Employee
     {
-        string name;
+        public string name;
 
         public Employee(string name)
         {
@@ -24,8 +24,8 @@ namespace _23._10._2024___3
     class Manager : Employee
     {
        
-        double mainSum;
-        double addBonus;
+       public double mainSum;
+       public double addBonus;
 
         public Manager( double mainSum, double addBonus) : base("name")
         {
@@ -41,8 +41,8 @@ namespace _23._10._2024___3
 
     class Worker : Employee
     {
-        double sumPerHour;
-        double hours;
+       public double sumPerHour;
+       public double hours;
 
         public Worker(double sumPerHour, double hours) : base("name") 
         {

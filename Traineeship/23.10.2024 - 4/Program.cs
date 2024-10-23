@@ -9,7 +9,7 @@ namespace _23._10._2024___4
 {
     public class ElectronicDevice
     {
-        int id;
+        public int id;
 
         public ElectronicDevice(int id)
         {

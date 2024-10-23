@@ -10,8 +10,8 @@ namespace _19._10._2024___1
 {
     public class Vechicle
     {
-        double speed;
-        string model;
+       public double speed;
+       public string model;
 
 
         public Vechicle(double speed, string model)
@@ -33,7 +33,7 @@ namespace _19._10._2024___1
     }
         public class Car : Vechicle
         {
-            int quantityDoors;
+           public int quantityDoors;
 
 
             public Car(int doors) : base(0, "model")
@@ -51,7 +51,7 @@ namespace _19._10._2024___1
 
         public class Bicycle : Vechicle
         {
-            int speedVariations;
+           public int speedVariations;
 
 
             public Bicycle(int variations) : base(0, "brand")

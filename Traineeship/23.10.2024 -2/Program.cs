@@ -7,7 +7,7 @@ namespace _23._10._2024__2
 {
     public class Shape
     {
-        double x;
+       public double x;
 
         public Shape(double x)
         {
@@ -21,7 +21,7 @@ namespace _23._10._2024__2
     }
     public class Circle : Shape
     {
-        double radius;
+        public double radius;
 
         public Circle ( double radius) : base(0)
         {
@@ -35,8 +35,8 @@ namespace _23._10._2024__2
     }
     public class Rectangle : Shape
     { 
-        int a;
-        int b;
+        public int a;
+        public int b;
 
         public Rectangle(int a, int b) : base(0)
         {
