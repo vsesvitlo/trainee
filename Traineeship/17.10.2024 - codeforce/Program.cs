@@ -24,7 +24,8 @@
  символов. Каждый символ является либо строчной латинской буквой, либо цифрой.
 
 Выходные данные
-Для каждого набора входных данных выведите «YES», если данный пароль является надежным, и «NO» в противном случае.
+Для каждого набора входных данных выведите «YES», если данный пароль является надежным, 
+и «NO» в противном случае.
 
 Пример*/namespace _17._10._2024___codeforce
 {
@@ -36,40 +37,60 @@
             string step1 = Console.ReadLine();
             int t = int.Parse(step1);
 
-
-            Console.WriteLine("Please, enter the n - the length of future password");
-            string step2 = Console.ReadLine();
-            int n = int.Parse(step1);
-
-
-            Console.WriteLine("Please, enter the password with n-length - it could be numbers or/and latin letters are available." +
-                "It should not be numbers after letters." +
-                "All the numbers and letters should be sorted in the increasing order");
-            string step3 = Console.ReadLine();
-            //int p = int.Parse(step1);
-            for(int k = 0; k <= n; k++)
+            if ((t >= 1) && (t <= 1000))
             {
-                
-                if ((t >= 1) && (t <= 1000) && (n >= 1) && (n <= 20))
+                for (int k = 0; k < t; k++)
                 {
-                    for (int i = 0; i < step3.Length; i++)
+                    Console.WriteLine("Please, enter the n - the length of future password");
+                    string step2 = Console.ReadLine();
+                    int n = int.Parse(step1);
+
+
+                    Console.WriteLine("Please, enter the password with n-length -" +
+                        "it could be numbers or/and latin letters are available." +
+                        "It should not be numbers after letters." +
+                        "All the numbers and letters should be sorted in the increasing order");
+
+                    string step3 = Console.ReadLine();
+
+                    bool check = true;
+                    if ((n >= 1) && (n <= 20))
                     {
-                        if (((step3[i] >= 97) && (step3[i] <= 122)) || ((step3[i] >= 30) && (step3[i] <= 39)))
+
+                        for (int i = 0, j = 1; i < step3.Length & j < step3.Length; i++, j++)
                         {
-                            for (int j = 1; j <= step3.Length - 1; j++)
+                            if (((step3[i] >= 97) && (step3[i] <= 122)) || ((step3[i] >= 48) && (step3[i] <= 57)))
                             {
-                                if (step3[i] <= step3[j])
+                                if (step3[i] > step3[j])
                                 {
-                                    Console.WriteLine("YES");
+
+                                    check = false;
                                 }
+
+                            }
+                            else
+                            {
+                                check = false;
                             }
                         }
-
+                    }
+                    if (check == true)
+                    {
+                        Console.WriteLine("Yes");
+                    }
+                    else
+                    {
+                        Console.WriteLine("NO");
                     }
                 }
+                
             }
-            
-            Console.WriteLine("NO");
+            else
+            {
+                Console.WriteLine("NO");
+            }
+
         }
     }
 }
+
