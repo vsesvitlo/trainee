@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 
 namespace _23._10._2024___3
 {
-    public class Employee
+    public abstract class Employee
     {
         public string name;
 
@@ -16,10 +16,7 @@ namespace _23._10._2024___3
         {
             this.name = name;
         }
-        public virtual string CalcWage()
-        {
-            return "Unique sum";
-        } 
+        public abstract string CalcWage();
     }
     class Manager : Employee
     {
@@ -60,7 +57,7 @@ namespace _23._10._2024___3
     {
         static void Main(string[] args)
         {
-            Employee employee = new Employee("Jill");
+            Employee employee = new Manager(1228, 789);
             Manager manager = new Manager(1500, 600);
             Worker worker = new Worker(133.44, 8.5);
             Console.WriteLine(manager.CalcWage());

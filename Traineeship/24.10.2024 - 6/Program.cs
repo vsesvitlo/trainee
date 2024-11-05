@@ -28,13 +28,51 @@ namespace _24._10._2024___6
         {
             this.list = list;
         }
-        public int AddProducts( Product product)
+        public void AddProducts(Product product)
         {
-            return list.Length + 1; ///?
+            int newLength = list.Length + 1;
+            Product[] newList = new Product[newLength];
+
+             for(int i = 0; i < newLength - 1; i++)
+            {
+                newList[i] = list[i];
+            }
+            newList[newLength - 1] = product;
+            list = newList;
         }
-        public int RemoveProducts(Product product)
+        public void RemoveProducts(Product product)
         {
-            return list.Length - 1; ///?
+            int calc = 0;
+            for (int i = 0; i < list.Length; i++)
+            {
+                if (list[i].name == product.name)
+                {
+                    calc++;
+                }
+            }
+
+            int newLength = list.Length - calc;
+           if (calc == 0)
+            {
+                return;
+            }
+
+            Product[] newList = new Product[newLength];
+
+            for (int i = 0, j = 0;  i < list.Length; j++)
+            {
+               
+                if (product.name != list[j].name)
+                {
+                    newList[i] = list[j];
+                    i++;
+
+                }
+             
+            }
+           
+            list = newList;
+
         }
 
         public int Calc()
@@ -63,10 +101,11 @@ namespace _24._10._2024___6
             Product third = new Product("milk", 35, 3);
             Product[] list = { first, second };
             ShoppingCart cart = new ShoppingCart(list);
-            Console.WriteLine(cart.AddProducts(first));//??
-            Console.WriteLine(cart.AddProducts(second));
-            Console.WriteLine(cart.AddProducts(third));
-            Console.WriteLine(cart.RemoveProducts(first));
+            cart.AddProducts(first);
+            cart.AddProducts(second);
+            cart.AddProducts(third);
+            cart.RemoveProducts(first);
+          
             Console.WriteLine(cart.Calc());
             Console.WriteLine(cart.TotalPrice());
         }

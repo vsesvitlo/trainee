@@ -5,7 +5,7 @@
 
 namespace _23._10._2024__2
 {
-    public class Shape
+     public abstract class Shape
     {
        public double x;
 
@@ -14,10 +14,8 @@ namespace _23._10._2024__2
             this.x = x;
         }
 
-        public virtual string CalculateArea()
-        {
-            return "area";
-        }
+        public abstract double CalculateArea();
+
     }
     public class Circle : Shape
     {
@@ -27,10 +25,10 @@ namespace _23._10._2024__2
         {
             this.radius = radius;
         }
-        public override string CalculateArea()
+        public override double CalculateArea()
         {
             double area = Math.PI * this.radius * this.radius;
-            return area.ToString();
+            return area;
         }
     }
     public class Rectangle : Shape
@@ -43,17 +41,17 @@ namespace _23._10._2024__2
             this.a = a;
             this.b = b;
         }
-        public override string CalculateArea()
+        public override double CalculateArea()
         {
             int area = this.a * this.b;
-            return area.ToString();
+            return area;
         }
     }
     internal class Program
     {
         static void Main(string[] args)
         {
-            Shape example = new Shape(0);
+            Shape example = new Circle(4);
             Circle circle = new Circle(4); 
             Rectangle rectangle = new Rectangle(8, 6);
             Console.WriteLine(circle.CalculateArea());

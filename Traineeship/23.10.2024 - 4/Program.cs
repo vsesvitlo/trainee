@@ -7,7 +7,7 @@
 
 namespace _23._10._2024___4
 {
-    public class ElectronicDevice
+    public abstract class ElectronicDevice
     {
         public int id;
 
@@ -16,10 +16,8 @@ namespace _23._10._2024___4
             this.id = id;
         }
 
-        public virtual string TurnOn()
-        {
-            return "turn on";
-        }
+        public abstract void TurnOn();
+        
     }
     public class Smartphone : ElectronicDevice
     {
@@ -30,6 +28,9 @@ namespace _23._10._2024___4
         {
             this.model = model;
             this.memory = memory;
+        }
+        public override void TurnOn() {
+            
         }
         public string Characteristics()
         {
@@ -50,6 +51,10 @@ namespace _23._10._2024___4
             this.model = model;
             this.typeProcess = typeProcess;
         }
+        public override void TurnOn()
+        {
+
+        }
         public string Characteristics()
         {
             return this.model + this.typeProcess;
@@ -64,7 +69,7 @@ namespace _23._10._2024___4
     {
         static void Main(string[] args)
         {
-            ElectronicDevice electronic = new ElectronicDevice(097745);
+            ElectronicDevice electronic = new Smartphone("Nokia", 16);
             Smartphone smartphone = new Smartphone("Nokia", 16);
             Laptop laptop = new Laptop("Lenovo", "Intel Core Ultra 5");
             Console.WriteLine(laptop.Characteristics());

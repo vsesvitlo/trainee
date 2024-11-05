@@ -32,17 +32,18 @@ public class Group
     {
         int groupNew = group.Length + 1;
         Student[] grNew = new Student[groupNew];
-        for (int i = 0, j = 0; i < grNew.Length; i++, j++)
+        
+        for (int i = 0, j = 0; i < group.Length; i++, j++)
         {
-            if (grNew[grNew.Length - 1] == group[j])
-            {
+           
                 grNew[i] = group[j];
-            }
-            else
-            {
-                grNew[grNew.Length - 1] = student;
-            }
+           
+            
+               
+            
         }
+        grNew[grNew.Length - 1] = student;
+        this.group = grNew;
     }
 
     public int Calc()
@@ -73,6 +74,7 @@ namespace _23._10._2024___5
             Student[] groupA= { studentOne, studentTwo };
             Group first = new Group(groupA);
            //?? Group A  =   first.AddStudent(studentOne);
+           first.AddStudents(studentTree);
        
             Console.WriteLine(first.Calc());
             Console.WriteLine(first.AverageMark());

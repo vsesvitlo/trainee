@@ -44,7 +44,8 @@ namespace _19._10._2024___1
 
         public override string DisplayInfo()
         {
-            return this.quantityDoors.ToString();// + this.speed.ToString() + " " + this.model; 
+            return this.quantityDoors.ToString() + " " + base.DisplayInfo(); 
+                // this.speed.ToString() + " " + this.model; 
         }
 
     }
@@ -63,7 +64,7 @@ namespace _19._10._2024___1
         public override string DisplayInfo()
         {
 
-            return this.speedVariations.ToString();
+            return this.speedVariations.ToString() + " " + base.DisplayInfo();
         }
         }
     
