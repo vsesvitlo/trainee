@@ -41,6 +41,10 @@ namespace _23._10._2024___6
             }
             return result;
         }
+        public void AddOrder(Order order) {
+            int newNumb = order.numb + 1;
+
+        }
     }
     public class Customer
     {
@@ -65,14 +69,19 @@ namespace _23._10._2024___6
               }
               return result;
           }*/
-        public int AddOrder()
+        public void AddOrder(Product product)
         {
-            int result = 0;
-            for (int i = 0; i < order.Length; i++)
+
+            int result = ;
+
+            for (int i = 0; i < result; i++)
             {
+                Order[] newOrder = new Order[result];
+
+
                 result = order[i].numb + 1;
             }
-            return result;
+           
         }
         public double TotalPrice()
         {

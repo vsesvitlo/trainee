@@ -59,7 +59,7 @@ namespace _24._10._2024___6
 
             Product[] newList = new Product[newLength];
 
-            for (int i = 0, j = 0;  i < list.Length; j++)
+            for (int i = 0, j = 0;  i < list.Length && j < list.Length; j++)
             {
                
                 if (product.name != list[j].name)

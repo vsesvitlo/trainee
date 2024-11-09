@@ -192,7 +192,7 @@ namespace _05._11._2024___825
             }
             if (forCalc.Length == 3)
             {
-                int c = int.Parse(forCalc[forCalc.Length - 2].ToString());
+                int c = int.Parse(forCalc[forCalc.Length - 3].ToString());
                 int b = int.Parse(forCalc[forCalc.Length - 2].ToString());
                 int a = int.Parse(forCalc[forCalc.Length - 1].ToString());
                 if (b == 1)
@@ -437,9 +437,9 @@ namespace _05._11._2024___825
     {
         static void Main(string[] args)
         {
-            Numb first = new Numb(111);
+            Numb first = new Numb(85);
             first.Conv();
-            Numb second = new Numb(99);
+            Numb second = new Numb(109);
             second.Conv();
             Numb third = new Numb(25);
             third.Conv();
