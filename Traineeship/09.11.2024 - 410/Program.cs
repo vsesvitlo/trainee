@@ -13,7 +13,9 @@ namespace _09._11._2024___410
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            int[] input = { 2, 6, 1, 7, 9 };
+            List<int> listExample = new List<int>(input);
+            int count = listExample.Count;
         }
     }
 }

@@ -14,7 +14,13 @@ namespace _09._11._2024___407
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            string[] input = { "Ukrainian", "French", "Bulgarian", "Norwegian", "Latvian" };
+            List<string> listExample = new List<string>(input);
+            listExample.Sort();
+            foreach (string i in listExample)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }
