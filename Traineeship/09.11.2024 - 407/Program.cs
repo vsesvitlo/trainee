@@ -17,10 +17,9 @@ namespace _09._11._2024___407
             string[] input = { "Ukrainian", "French", "Bulgarian", "Norwegian", "Latvian" };
             List<string> listExample = new List<string>(input);
             listExample.Sort();
-            foreach (string i in listExample)
-            {
-                Console.WriteLine(i);
-            }
+            string result = string.Join(" ", listExample);
+            Console.WriteLine(result);
+          
         }
     }
 }

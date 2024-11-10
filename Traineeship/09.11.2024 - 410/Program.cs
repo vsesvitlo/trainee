@@ -16,10 +16,8 @@ namespace _09._11._2024___410
             int[] input = { 2, 6, 1, 7, 9 };
             List<int> listExample = new List<int>(input);
             listExample.Reverse();
-            foreach (int i in listExample)
-            {
-                Console.WriteLine(i);
-            }
+            string result = string.Join(" ", listExample);
+            Console.WriteLine(result);
         }
     }
 }

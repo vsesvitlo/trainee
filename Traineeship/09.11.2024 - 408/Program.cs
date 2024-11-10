@@ -18,10 +18,8 @@ namespace _09._11._2024___408
             List<string> listExample = new List<string>(input);
             listExample.Sort();
             listExample.Reverse();
-            foreach (string i in listExample)
-            {
-                Console.WriteLine(i);
-            }
+            string result = string.Join(" ", listExample);
+            Console.WriteLine(result);
         }
     }
 }
