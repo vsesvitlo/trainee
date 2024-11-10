@@ -16,7 +16,11 @@ namespace _09._11._2024___409
         {
             string[] input = { "Ukrainian", "French", "Bulgarian", "Norwegian", "Latvian" };
             List<string> listExample = new List<string>(input);
-            int count = listExample.Count;
+            listExample.Reverse();
+            foreach (string i in listExample)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }
