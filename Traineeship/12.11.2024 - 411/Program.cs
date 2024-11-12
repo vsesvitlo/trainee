@@ -16,11 +16,15 @@ namespace _12._11._2024___411
         {
             int[] input = { 1, 2, 3, 4, 5 };
             List<int> listExample = new List<int>(input);
-            foreach (int i in listExample)
+            List<int> listExampleNew = new List<int>();
+            for (int i = 0; i < input.Length; i++)
             {
-                listExample.Add(i);
+                if (i % 2 == 0)
+                {
+                    listExampleNew.Add(input[i]);
+                }
             }
-            string result = string.Join(" ", listExample);
+            string result = string.Join(" ", listExampleNew);
             Console.WriteLine(result);
         }
     }
