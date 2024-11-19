@@ -13,8 +13,20 @@ namespace _19._11._2024___453
     {
         static void Main(string[] args)
         {
-            int[] input = { -3, -1, 0, 2, 6, 8, 12, 15 };
+            int[] input = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
             List<int> listExample = new List<int>(input);
+
+            List<int> listExampleNew = new List<int>();
+
+            for (int i = 0; i < input.Length; i++) {
+                 /*double a = Convert.ToDouble(input[i]);
+                 double b = Math.Pow(a, a);
+                 string d = Convert.ToString(b);
+                 int c = int.Parse(d);*/
+               listExampleNew.Add(input[i] * input[i]);
+            }
+            string result1 = string.Join(" ", listExampleNew);
+            Console.WriteLine(result1);
         }
     }
 }
