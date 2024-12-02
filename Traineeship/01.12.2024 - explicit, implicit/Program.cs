@@ -36,7 +36,7 @@ namespace _01._12._2024___explicit__implicit
         }
         public override string ToString()
         {
-            return .ToString();
+            return Celsuis.ToString();
         }
 
     }
@@ -68,11 +68,11 @@ namespace _01._12._2024___explicit__implicit
     {
         static void Main(string[] args)
         {
-        Temperature temperature = new Temperature(32);
+        
+        Temperature temperature = new Temperature(32.00);
         Fahrenheit fahrenheit = new Fahrenheit(89.6);
-        double result1 = ConvertFar(fahrenheit);
-        Console.WriteLine(temperature.
-            );
+        double far = 89.6;
+        Console.WriteLine(fahrenheit.ConvertCelcius(far));
         }
     }
 }
