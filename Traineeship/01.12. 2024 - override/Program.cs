@@ -14,13 +14,15 @@ namespace _01._12._2024___override
             this.adress = adress;
             this.number = number;
         }
-        public virtual bool Checking(string adress2, int number2)
+        public virtual bool Checking(string adress1, int number1)
         {
-            if (this.adress == adress2 && this.number == number2)
+            if (this.adress == adress1 && this.number == number1)
             {
                 return true;
             }
-            return false;
+            else {
+                return false;
+            } 
         }
     }
     public class CheckAdress : Adress
@@ -31,11 +33,15 @@ namespace _01._12._2024___override
         }
         public override bool Checking(string adress2, int number2)
         {
-            if (this.adress != adress2 && this.number != number2)
+            if (this.adress != adress2 || this.number != number2)
             {
-                return false;
+                return true;
             }
-            return true;
+            else {
+                return false;
+
+            }
+            
         }
     }
     internal class Program
@@ -47,7 +53,7 @@ namespace _01._12._2024___override
             CheckAdress example2 = new CheckAdress();
 
             Console.WriteLine(example1.Checking("Zizkova", 1121));
-            Console.WriteLine(example2.Checking("Abc", 1));
+            Console.WriteLine(example2.Checking("Abcd", 11));
         }
     }
 }
