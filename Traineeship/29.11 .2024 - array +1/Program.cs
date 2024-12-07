@@ -25,34 +25,12 @@ namespace _29._11_._2024___array__1
     {
         public static int[] UpArray(int[] num)
         {
-            /*string a = "";
-            string element = "";
-            int sum = 0;
-            int[] newNum = new int[num.Length];
 
-            for (int i = 0; i < num.Length; i++)
-            {
-                if ((num[i] >= 0) && (num[i] < 10))
-                {
-                    a += num[i];
-                }
-               newNum =  null;
-            }
-            int.TryParse(a, out int sumConvert);
-            sum = sumConvert + 1;
-            string sumForReverse = sum.ToString();
-
-            for (int j = 0; j < sumForReverse.Length; j++)
-            {
-                element = sumForReverse[j].ToString();
-                newNum[j] = int.Parse(element);
-
-            }
-
-            */
             int[] newNum = new int[num.Length];
             num.CopyTo(newNum, 0);
             int z = 0;
+            int x = 0;
+            int y = 1;
             if (num.Length == 0)
             {
                 return null;
@@ -64,35 +42,20 @@ namespace _29._11_._2024___array__1
                 newNum[0] = 1;
                 return newNum;
             }
-            for (int i = newNum.Length - 1; i > 0; i--)
+            for (int i = newNum.Length - 1; i >= 0; i--)
             {
                 if (newNum[i] < 0 || newNum[i] > 9)
                 {
                     return null;
                 }
-                if (newNum[newNum.Length - 1] == 9)
+                x = newNum[newNum.Length - y];
+                if (x == 9)
                 {
-                    newNum[newNum.Length - 1] = 0;
-                    z = newNum[newNum.Length - 2] + 1;
-                    newNum[newNum.Length - 2] = z;
-                    if (newNum[0] == z)
-                    {
-                        break;
-                    }
-                    if (newNum[newNum.Length - 2] > 9)
-                    {
-                        newNum[newNum.Length - 2] = 0;
-                        newNum[newNum.Length - 3] += 1;
-                    }
-                    if (newNum[0] == z)
-                    {
-                        break;
-                    }
-                    if (newNum[newNum.Length - 3] > 9)
-                    {
-                        newNum[newNum.Length - 3] = 0;
-                        newNum[newNum.Length - 4] += 1;
-                    }
+                    newNum[newNum.Length - y] = 0;
+                    y++;
+                    z = newNum[newNum.Length - y] + 1;
+                    newNum[newNum.Length - y] = z;
+
                     if (newNum[0] == z)
                     {
                         break;
@@ -104,61 +67,61 @@ namespace _29._11_._2024___array__1
                 newNum[newNum.Length - 1] += 1;
                 break;
 
-
-
             }
-            /*for (int i = newNum.Length - 1; i > 0; i--)
-           {
-               if (newNum[i] < 0 || newNum[i] > 9)
-               {
-                   return null;
-               }
-               if (newNum[newNum.Length - 1] == 9)
-               {
-                   newNum[newNum.Length - 1] = 0;
-                   z = newNum[newNum.Length - 2] + 1;
-                   newNum[newNum.Length - 2] = z;
-                   if (newNum[0] == z)
-                   {
-                       break;
-                   }
-                  // newNum[newNum.Length - 1] += 1;
-                   break;
-               }
-               newNum[newNum.Length - 1] += 1;
-               break;
 
-           }
-           {
-               //newNum[0] = num[0];
-
-               if (num[i] < 0 || num[i] > 9)
-               {
-                   return null;
-               }
-               if (num[i] == 9)
-               {
-                   newNum[i] = 0;
-                   z = num[i - 1] + 1;
-                   newNum[i - 1] = z;
-                   if (newNum[0] == z)
-                   {
-                       break;
-                   }
-                   newNum[0] = num[0];
-                   break;
-               }
-
-               else
-               {
-                   newNum[0] = num[0];
-                   newNum[i] = num[i];
-                   newNum[newNum.Length - 1] = num[num.Length - 1] + 1;
-               }
-
-           }*/
             return newNum;
-            
+
         }
     }
 }
+
+/*for (int i = newNum.Length - 1; i > 0; i--)
+{
+   if (newNum[i] < 0 || newNum[i] > 9)
+   {
+       return null;
+   }
+   if (newNum[newNum.Length - 1] == 9)
+   {
+       newNum[newNum.Length - 1] = 0;
+       z = newNum[newNum.Length - 2] + 1;
+       newNum[newNum.Length - 2] = z;
+       if (newNum[0] == z)
+       {
+           break;
+       }
+      // newNum[newNum.Length - 1] += 1;
+       break;
+   }
+   newNum[newNum.Length - 1] += 1;
+   break;
+
+}
+{
+   //newNum[0] = num[0];
+
+   if (num[i] < 0 || num[i] > 9)
+   {
+       return null;
+   }
+   if (num[i] == 9)
+   {
+       newNum[i] = 0;
+       z = num[i - 1] + 1;
+       newNum[i - 1] = z;
+       if (newNum[0] == z)
+       {
+           break;
+       }
+       newNum[0] = num[0];
+       break;
+   }
+
+   else
+   {
+       newNum[0] = num[0];
+       newNum[i] = num[i];
+       newNum[newNum.Length - 1] = num[num.Length - 1] + 1;
+   }
+
+}*/
