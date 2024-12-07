@@ -41,7 +41,7 @@ namespace _01._12._2024___explicit__implicit
 
     }
 }
-    public class Fahrenheit
+   /* public class Fahrenheit
     {
         public double Fahr;
 
@@ -62,7 +62,7 @@ namespace _01._12._2024___explicit__implicit
     {
        return f.Fahr;
     }
-}
+}*/
     
     internal class Program
     {
