@@ -243,6 +243,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.12.2024 - explicit, impl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.12.2024 - array+array", "07.12.2024 - array+array\07.12.2024 - array+array.csproj", "{1C6C0C17-C79E-4E1E-B7D8-D60AB2A22861}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.12.2024 - plus-minus-plus", "07.12.2024 - plus-minus-plus\07.12.2024 - plus-minus-plus.csproj", "{63F18138-AECF-4404-A0F4-ABBA952B13F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -729,6 +731,10 @@ Global
 		{1C6C0C17-C79E-4E1E-B7D8-D60AB2A22861}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C6C0C17-C79E-4E1E-B7D8-D60AB2A22861}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C6C0C17-C79E-4E1E-B7D8-D60AB2A22861}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63F18138-AECF-4404-A0F4-ABBA952B13F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63F18138-AECF-4404-A0F4-ABBA952B13F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63F18138-AECF-4404-A0F4-ABBA952B13F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63F18138-AECF-4404-A0F4-ABBA952B13F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
