@@ -14,13 +14,13 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace _01._12._2024___explicit__implicit
 {
-    class Temperature
+    public class Temperature
     {
-        public double Celsuis;
+        public double temperature;
 
-        public Temperature(double celsuis)
+        public Temperature(double temperature)
         {
-            Celsuis = celsuis;
+            temperature = this.temperature;
         }
 
         public static double ConvertFar(double temp)
@@ -29,50 +29,59 @@ namespace _01._12._2024___explicit__implicit
 
             return result;
         }
-
-        public static explicit operator double(Temperature c)
+        public static double ConvertCelsius(double far)
         {
-            return c.Celsuis; 
+            double result = (far - 32) * 5 / 9;
+
+            return result;
         }
-        public override string ToString()
+
+
+    }
+
+    public class Celsuis : Temperature
+    {
+        public Celsuis() : base(0)
+        {
+            ConvertFar(0);
+        }
+        public static explicit operator double(Celsuis c)
+        {
+            return c.temperature;
+        }
+        /*public override string ToString()
         {
             return Celsuis.ToString();
+        }*/
+    }
+    public class Fahrenheit : Temperature
+    {
+        public Fahrenheit() : base(0)
+        {
+            ConvertCelsius(0);
         }
+        public static implicit operator double(Fahrenheit f)
 
+        {
+            return f.temperature;
+        }
     }
-}
-   /* public class Fahrenheit
-    {
-        public double Fahr;
 
-    public Fahrenheit(double fahrenheit)
-    {
-        Fahr = fahrenheit;
-    }
-    public static double ConvertCelcius(double far)
-    {
-        double result = ( far - 32) * 5 / 9;
-
-        return result;
-    }
-   
-    
-    public static implicit operator double(Fahrenheit f)
-
-    {
-       return f.Fahr;
-    }
-}*/
-    
     internal class Program
     {
         static void Main(string[] args)
         {
-        
-        Temperature temperature = new Temperature(32.00);
-        Fahrenheit fahrenheit = new Fahrenheit(89.6);
-        double far = 89.6;
-        Console.WriteLine(fahrenheit.ConvertCelcius(far));
+
+            Temperature temperature = new Temperature(32);
+            Celsuis celsuis = new Celsuis();
+            Fahrenheit fahrenheit = new Fahrenheit();
+            double cel = 89.6;
+            double cel2 = 0;
+            double far = 0;
+            Console.WriteLine(Celsuis.ConvertFar(cel));
+            Console.WriteLine(Celsuis.ConvertFar(cel2));
+            Console.WriteLine(Fahrenheit.ConvertCelsius(far));
         }
     }
+
 }
