@@ -2,6 +2,8 @@
 Перегрузити оператори "!=" i "==" для адресу(клас адреси має два поля - вулиця і номер будинку)
 */
 
+using System.Net.Sockets;
+
 namespace _01._12._2024___override
 {
     public class Adress
@@ -14,7 +16,7 @@ namespace _01._12._2024___override
             this.adress = adress;
             this.number = number;
         }
-        public virtual bool Checking(string adress1, int number1)
+        public bool Equals(string adress1, int number1)
         {
             if (this.adress == adress1 && this.number == number1)
             {
@@ -29,9 +31,17 @@ namespace _01._12._2024___override
     {
         public CheckAdress() : base("Abc", 1)
         {
-            Checking(this.adress, this.number);
+            Equals(this.adress, this.number);
         }
-        public override bool Checking(string adress2, int number2)
+
+        public override bool Equals(Adress adress)
+        {
+            if (adress == null || !(adress is Adress) || (number == null) || !(number is Adress))
+                return false;
+            else
+                return this.adress == ((Adress)adress).adress;
+        }
+        /*public override bool Checking(string adress2, int number2)
         {
             if (this.adress != adress2 || this.number != number2)
             {
@@ -42,7 +52,25 @@ namespace _01._12._2024___override
 
             }
             
-        }
+        }*/
+
+        /*public override bool Equals(Object obj)
+   {
+      if (obj == null || !(obj is Dog))
+         return false;
+      else
+         return this.Breed == ((Dog) obj).Breed;
+   }
+
+   public override int GetHashCode()
+   {
+      return this.Breed.GetHashCode();
+   }
+
+   public override string ToString()
+   {
+      return this.Breed;
+   }*/
     }
     internal class Program
     {
@@ -52,8 +80,8 @@ namespace _01._12._2024___override
             CheckAdress example1 = new CheckAdress();
             CheckAdress example2 = new CheckAdress();
 
-            Console.WriteLine(example1.Checking("Zizkova", 1121));
-            Console.WriteLine(example2.Checking("Abcd", 11));
+            Console.WriteLine(example1.Equals("Zizkova", 1121));
+            Console.WriteLine(example2.Equals("Abcd", 11));
         }
     }
 }
