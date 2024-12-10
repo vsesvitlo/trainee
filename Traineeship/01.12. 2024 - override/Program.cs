@@ -16,9 +16,9 @@ namespace _01._12._2024___override
             this.adress = adress;
             this.number = number;
         }
-        public bool Equals(string adress1, int number1)
+        public virtual bool Equals(Adress adress)
         {
-            if (this.adress == adress1 && this.number == number1)
+            if (this.adress == adress.adress && this.number == adress.number)
             {
                 return true;
             }
@@ -80,8 +80,8 @@ namespace _01._12._2024___override
             CheckAdress example1 = new CheckAdress();
             CheckAdress example2 = new CheckAdress();
 
-            Console.WriteLine(example1.Equals("Zizkova", 1121));
-            Console.WriteLine(example2.Equals("Abcd", 11));
+            Console.WriteLine(example1.Equals(example));
+            
         }
     }
 }
