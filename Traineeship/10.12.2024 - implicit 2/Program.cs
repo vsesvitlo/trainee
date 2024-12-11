@@ -5,11 +5,29 @@
 де значення буде виведено як реальна частина + уявна частина i.*/
 namespace _10._12._2024___implicit_2
 {
+    public class ComplexNumber
+    {
+       public int a;
+       public string i;
+
+        public ComplexNumber(int a, string i)
+        {
+            this.a = a;
+            this.i = i;
+        }
+        public static implicit operator string(ComplexNumber complexNumber)
+        {
+            string result = complexNumber.a + complexNumber.i;
+            return result;
+        }
+    }
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            ComplexNumber complexNumber = new ComplexNumber( 4, "i");
+            Console.WriteLine(complexNumber.a.GetType());
+            Console.WriteLine(complexNumber + "b");
         }
     }
 }
