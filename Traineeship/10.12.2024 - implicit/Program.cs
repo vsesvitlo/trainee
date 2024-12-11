@@ -21,7 +21,7 @@ namespace _10._12._2024___implicit
             double resultX = 0 - point.x;
             double resultY = 0 - point.y;
             Point point2 = new Point((int)resultX, (int)resultY);
-            return point2;
+            return point.x + point.y;
         } 
     }
     internal class Program
@@ -29,8 +29,8 @@ namespace _10._12._2024___implicit
         static void Main(string[] args)
         {
             Point point = new Point(9, 6);
-            Console.WriteLine(point.x.GetType());
-            Console.WriteLine(point.y. GetType());
+            Console.WriteLine(point + 3.5);
+            Console.WriteLine(point.y.GetType());
         }
     }
 }
