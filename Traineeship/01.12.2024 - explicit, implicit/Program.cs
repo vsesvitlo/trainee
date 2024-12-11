@@ -61,7 +61,7 @@ namespace _01._12._2024___explicit__implicit
             ConvertCelsius(0);
         }
         public static implicit operator double(Fahrenheit f)
-
+              
         {
             return f.temperature;
         }
