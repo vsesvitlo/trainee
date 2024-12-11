@@ -59,7 +59,9 @@ namespace _11._12._2025___Equals___
     {
         static void Main(string[] args)
         {
-              
+            Car first = new Car("Nissan", "X-trail");
+            Car second = new Car("Nissan", "X-trail");
+            Console.WriteLine(first == second);
         }
     }
 }
