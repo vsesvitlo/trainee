@@ -8,16 +8,21 @@ namespace _10._12._2024___implicit_2
     public class ComplexNumber
     {
        public int a;
-       public string i;
+       public int i;
 
-        public ComplexNumber(int a, string i)
+        public ComplexNumber(int a, int i)
         {
             this.a = a;
             this.i = i;
         }
         public static implicit operator string(ComplexNumber complexNumber)
         {
-            string result = complexNumber.a + complexNumber.i;
+            string result = complexNumber.a.ToString() + complexNumber.i;
+            return result;
+        }
+        public static implicit operator double(ComplexNumber complexNumber)
+        {
+           double result = complexNumber.a + complexNumber.i;
             return result;
         }
     }
@@ -25,7 +30,7 @@ namespace _10._12._2024___implicit_2
     {
         static void Main(string[] args)
         {
-            ComplexNumber complexNumber = new ComplexNumber( 4, "i");
+            ComplexNumber complexNumber = new ComplexNumber( 4, 9);
             Console.WriteLine(complexNumber.a.GetType());
             Console.WriteLine(complexNumber + "b");
         }

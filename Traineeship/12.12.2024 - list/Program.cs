@@ -22,21 +22,15 @@ namespace _12._12._2024___list
             string[] input1 = { "Вода", "Хліб", "Молоко", "Морозиво" };
             string[] input2 = { "Цукор", "Сіль", "Паприка", "Перець" };
             string[] input3 = { "Вафлі", "Бублик", "Інжир", "Хліб" };
-            List<string> productsShop = new List<string>(input1);
+            List<string> productsShop = new List<string>(input3);
             string positive = "Yes";
-            string negative = "No";
-            string result = "";
+            string result = "No";
             for (int i = 0; i < products.Count; i++)
             {
                 if (productsShop.Contains(products[i]) )
                 {
                     result = positive;
                     break;
-                }
-                else
-                {
-                    result = negative;
-                   
                 }
             }
             Console.Write(result);
