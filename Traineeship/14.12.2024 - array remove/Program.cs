@@ -27,18 +27,21 @@ namespace _14._12._2024___array_remove
         {
 
             int counter = 0;
-            int j = 0;
+            
             int o = 0;
             for (int i = 0; i < integerList.Length; i++)
             {
-
-                if ( integerList[i] == valuesList[j]) //&& j < valuesList.Length)
+                for (int j = 0; j < valuesList.Length; j++)
                 {
-                    counter++;
-                  
+                    if ( integerList[i] != valuesList[j])
+                    {
+                        counter++;
+
+                    }
                 }
+                
             }
-            j++;
+           
             int[] integerNew = new int[counter];
             Console.WriteLine(counter) ;
             int m = 0;
@@ -51,7 +54,7 @@ namespace _14._12._2024___array_remove
                         integerNew[m] = integerList[k];
                         //Console.WriteLine(integerNew[m]);
                     }
-                    Console.WriteLine(integerNew[m]);
+                    //Console.WriteLine(integerNew[m]);
                 }
              
                 m++;
