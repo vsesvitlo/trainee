@@ -1,12 +1,29 @@
-﻿namespace _18._12._2024___exclamation_marks
+﻿/*
+ Description:
+Count the number of exclamation marks and question marks, return the product.
+
+Examples
+""          --->   0
+"!"         --->   0
+"!ab? ?"    --->   2
+"!!"        --->   0
+"!??"       --->   2
+"!???"      --->   3
+"!!!??"     --->   6
+"!!!???"    --->   9
+"!???!!"    --->   9
+"!????!!!?" --->  20
+ */
+
+namespace _18._12._2024___exclamation_marks
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            string s = "!!???????!!!!!";
+          string s = "!!???????!!!!!";
           int result  = Kata.Product(s);
-        Console.WriteLine(result);
+          Console.WriteLine(result);
           
         }
     }
