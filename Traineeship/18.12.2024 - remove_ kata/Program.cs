@@ -23,7 +23,7 @@ namespace _18._12._2024___remove__kata
     {
         static void Main(string[] args)
         {
-            string s = "!????!!!?";
+            string s = "????!!!?";
             string result = Kata.Removing(s);
             Console.WriteLine(result);
         }
@@ -49,6 +49,7 @@ namespace _18._12._2024___remove__kata
                             break;
                         }
                         q = 0;
+                        
                     }
                     if (str[i] == 63)
                     {
@@ -59,6 +60,7 @@ namespace _18._12._2024___remove__kata
                             break;
                         }
                         e = 0;
+                        //Console.WriteLine(str);
                     }
 
                 }
