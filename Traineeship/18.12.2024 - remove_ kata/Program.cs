@@ -23,7 +23,7 @@ namespace _18._12._2024___remove__kata
     {
         static void Main(string[] args)
         {
-            string s = "????!!!?";
+            string s = "!!!??";
             string result = Kata.Removing(s);
             Console.WriteLine(result);
         }
@@ -33,7 +33,7 @@ namespace _18._12._2024___remove__kata
         public static string Removing (string str)
         {
 
-            
+
             while (str.Length > 2)
             {
                 int e = 0;
@@ -43,31 +43,32 @@ namespace _18._12._2024___remove__kata
                     if (str[i] == 33)
                     {
                         e++;
-                        if (q > 1 && q % 2 == 1)
+                        if (q > 2 && q % 2 == 1)
                         {
                             str = str.Substring(0, i - q) + str.Substring(i);
+                            q = 0;
                             break;
                         }
-                        q = 0;
-                        
+
+
                     }
                     if (str[i] == 63)
                     {
                         q++;
-                        if (e > 1 && e % 2 == 1)
+                        if (e > 2 && e % 2 == 1)
                         {
                             str = str.Substring(0, i - e) + str.Substring(i);
+                            e = 0;
                             break;
                         }
-                        e = 0;
-                        //Console.WriteLine(str);
+
                     }
 
                 }
                 if (q > 1 && q % 2 == 1)
                 {
                     str = str.Substring(0, str.Length - q);
-                    
+
                 }
 
                 if (e > 1 && e % 2 == 1)
@@ -76,7 +77,6 @@ namespace _18._12._2024___remove__kata
                 }
 
             }
-
             return str;
         }
     }

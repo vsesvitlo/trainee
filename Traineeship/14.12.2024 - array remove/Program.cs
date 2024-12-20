@@ -1,5 +1,11 @@
 ﻿using System;
+/*Define a method/function that removes from a given array of integers all the values contained in a second array.
 
+Examples (input -> output):
+* [1, 1, 2, 3, 1, 2, 3, 4], [1, 3] -> [2, 2, 4]
+* [1, 1, 2, 3, 1, 2, 3, 4, 4, 3, 5, 6, 7, 2, 8], [1, 3, 4, 2] -> [5, 6, 7, 8]
+* [8, 2, 7, 2, 3, 4, 6, 5, 4, 4, 1, 2, 3], [2, 4, 3] -> [8, 7, 6, 5, 1]
+Enjoy it!!*/
 namespace _14._12._2024___array_remove
 {
     internal class Program
@@ -13,7 +19,7 @@ namespace _14._12._2024___array_remove
             //int[] newNum2 = Kata.UpArray(newNum1);
             for (int k = 0; k < num3.Length; k++)
             {
-               // Console.WriteLine((num3[k]));
+               Console.WriteLine((num3[k]));
             }
             //for (int k = 0; k < newNum2.Length; k++)
             {
@@ -26,48 +32,80 @@ namespace _14._12._2024___array_remove
         public static int[] Remove(int[] integerList, int[] valuesList)
         {
 
+            int counterTwice = 0;
+            //int counterAll = integerList.Length * valuesList.Length;
             int counter = 0;
-            //int j = 0;
-            int o = 0;
-            for (int j = 0; j < valuesList.Length; j++)
+            for(int i = 0; i < valuesList.Length; i++)
             {
-               if (valuesList[j] != integerList[j])
+                for (int j = 0; j < integerList.Length; j++)
                 {
-                    for (int i = 0; i < integerList.Length; i++)
+                    if (valuesList[i] == integerList[j])
                     {
-
-                        if (valuesList[j] != integerList[i])//&& valuesList[j] != integerList[j])
-                        {
-                            counter++;
-                        }
-
+                        counterTwice++;
                     }
-
-               }
-            
-            }       
-
-           
-
-            int[] integerNew = new int[counter];
-            Console.WriteLine(counter) ;
-            int m = 0;
-            for (int k = 0; k < integerList.Length; k++)
-            {
-                if ( m < counter)
-                {
-                    if (integerList[k] != valuesList[o])
-                    {
-                        integerNew[m] = integerList[k];
-                        //Console.WriteLine(integerNew[m]);
-                    }
-                    //Console.WriteLine(integerNew[m]);
+                    
                 }
-             
-                m++;
+                counter = integerList.Length - counterTwice;
             }
-            o++;
             
+           // Console.WriteLine(counter);
+            int[] integerNew = new int[counter];
+            int k = 0;
+            for (int j = 0; j < integerList.Length; j++)
+            { 
+                if (!valuesList.Contains(integerList[j]))
+                {
+                   
+                        integerNew[k] = integerList[j];
+                        k++;
+
+                }
+                
+            }
+
+
+
+            //int j = 0;
+            //int o = 0;
+
+            /* for (int j = 0; j < valuesList.Length; j++)
+             {
+                if (valuesList[j] != integerList[j])
+                 {
+                     for (int i = 0; i < integerList.Length; i++)
+                     {
+
+                         if (valuesList[j] != integerList[i])//&& valuesList[j] != integerList[j])
+                         {
+                             counter++;
+                         }
+
+                     }
+                }
+
+             }       
+
+
+
+             int[] integerNew = new int[counter];
+             Console.WriteLine(counter) ;
+             int m = 0;
+             for (int k = 0; k < integerList.Length; k++)
+             {
+                 if ( m < counter)
+                 {
+                     if (integerList[k] != valuesList[o])
+                     {
+                         integerNew[m] = integerList[k];
+                         //Console.WriteLine(integerNew[m]);
+                     }
+                     //Console.WriteLine(integerNew[m]);
+                 }
+
+                 m++;
+             }
+             o++;*/
+
             return integerNew;
         }
     }
