@@ -265,6 +265,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18.12.2024 - exclamation ma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18.12.2024 - remove_ kata", "18.12.2024 - remove_ kata\18.12.2024 - remove_ kata.csproj", "{284E84CE-C045-46B0-B75B-6BADB547D40E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "22.12.2024 - heron formula", "22.12.2024 - heron formula\22.12.2024 - heron formula.csproj", "{BA523DAD-2CF0-4CC9-BBEC-DDD9D1C21CC9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -795,6 +797,10 @@ Global
 		{284E84CE-C045-46B0-B75B-6BADB547D40E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{284E84CE-C045-46B0-B75B-6BADB547D40E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{284E84CE-C045-46B0-B75B-6BADB547D40E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA523DAD-2CF0-4CC9-BBEC-DDD9D1C21CC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA523DAD-2CF0-4CC9-BBEC-DDD9D1C21CC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA523DAD-2CF0-4CC9-BBEC-DDD9D1C21CC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA523DAD-2CF0-4CC9-BBEC-DDD9D1C21CC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
