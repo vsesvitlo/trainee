@@ -51,20 +51,26 @@ namespace _14._12._2024___array_remove
             if (k < counter)
             {
 
+               
 
                 foreach (int l in integerList)
                 {
-                    foreach (int h in integerList)
+                    bool isNotTrue = true;
+                    foreach (int h in valuesList)
                     {
-                        if (h != l)
+                        if (h == k)
                         {
-                            integerNew[k] = l;
-                            k++;
-
+                            isNotTrue = false;
+                            break;
                         }
 
                     }
+                    if (isNotTrue)
+                    {
+                        integerNew[k] = l;
+                        k++;
 
+                    }
                 }
             }
 
