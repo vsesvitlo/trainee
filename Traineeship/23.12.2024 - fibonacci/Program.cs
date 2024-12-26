@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            int result = Fibonacci.Fib(5); 
+            int result = Fibonacci.Fib(10); 
             Console.WriteLine(result);
         }
     }
@@ -14,13 +14,13 @@
         {
             int result = 0;
             int result1 = 1;
+            int m = 0;
 
-
-            for (int i = 1; i <= n; i++)
-            {
-                
-                result1 = result1 + result;
-                result = result1;
+            for (int i = 0; i <= n; i++)
+            { 
+                result = result + m;
+                m = result1;
+                result1= result;
             }
 
 
