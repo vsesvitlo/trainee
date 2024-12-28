@@ -261,15 +261,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12.12.2024 - list", "12.12.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "14.12.2024 - array remove", "14.12.2024 - array remove\14.12.2024 - array remove.csproj", "{62ABA6BA-57E7-423D-A7D8-7865C921752F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18.12.2024 - exclamation marks", "18.12.2024 - exclamation marks\18.12.2024 - exclamation marks.csproj", "{E82B57BC-800D-422C-980F-4246D9D7FFAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "18.12.2024 - exclamation marks", "18.12.2024 - exclamation marks\18.12.2024 - exclamation marks.csproj", "{E82B57BC-800D-422C-980F-4246D9D7FFAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18.12.2024 - remove_ kata", "18.12.2024 - remove_ kata\18.12.2024 - remove_ kata.csproj", "{284E84CE-C045-46B0-B75B-6BADB547D40E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "18.12.2024 - remove_ kata", "18.12.2024 - remove_ kata\18.12.2024 - remove_ kata.csproj", "{284E84CE-C045-46B0-B75B-6BADB547D40E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "22.12.2024 - heron formula", "22.12.2024 - heron formula\22.12.2024 - heron formula.csproj", "{BA523DAD-2CF0-4CC9-BBEC-DDD9D1C21CC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "22.12.2024 - heron formula", "22.12.2024 - heron formula\22.12.2024 - heron formula.csproj", "{BA523DAD-2CF0-4CC9-BBEC-DDD9D1C21CC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "23.12.2024 - factorial kata", "23.12.2024 - factorial kata\23.12.2024 - factorial kata.csproj", "{E2A6B3B5-2D6B-40AC-8BA5-A124AE276D81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "23.12.2024 - factorial kata", "23.12.2024 - factorial kata\23.12.2024 - factorial kata.csproj", "{E2A6B3B5-2D6B-40AC-8BA5-A124AE276D81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "23.12.2024 - fibonacci", "23.12.2024 - fibonacci\23.12.2024 - fibonacci.csproj", "{70AA6599-76DC-4E7D-8738-0C96BB4B5488}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "23.12.2024 - fibonacci", "23.12.2024 - fibonacci\23.12.2024 - fibonacci.csproj", "{70AA6599-76DC-4E7D-8738-0C96BB4B5488}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "28.12.2024 - remove duplicate", "28.12.2024 - remove duplicate\28.12.2024 - remove duplicate.csproj", "{09B939E4-2B92-480A-82D4-FC0FB9880186}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -813,6 +815,10 @@ Global
 		{70AA6599-76DC-4E7D-8738-0C96BB4B5488}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70AA6599-76DC-4E7D-8738-0C96BB4B5488}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70AA6599-76DC-4E7D-8738-0C96BB4B5488}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09B939E4-2B92-480A-82D4-FC0FB9880186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09B939E4-2B92-480A-82D4-FC0FB9880186}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09B939E4-2B92-480A-82D4-FC0FB9880186}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09B939E4-2B92-480A-82D4-FC0FB9880186}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
